@@ -20,9 +20,9 @@ If you don't have a local WordPress environment to load Gutenberg in, we can hel
 ## Local Environment
 
 ### Step 1: Installing a Local Environment
-#### Quickest Method: Using Docker
+#### Quickest Method: Using `wp-env`
 
-The quickest way to get up and running is to use the provided Docker setup. If you don't already have it, you'll need to install Docker and Docker Compose.
+The quickest way to get up and running is to use the [`wp-env` command](https://github.com/WordPress/gutenberg/tree/master/packages/env), which is developed within the Gutenberg source repository, and published as `@wordpress/env` to npm. If you don't already have it, you'll need to install Docker and Docker Compose in order to use `wp-env`.
 
 To install Docker, follow their instructions here for [Windows 10 Pro](https://docs.docker.com/docker-for-windows/install/), [all other version of Windows](https://docs.docker.com/toolbox/toolbox_install_windows/), [macOS](https://docs.docker.com/docker-for-mac/install/), or [Linux](https://docs.docker.com/v17.12/install/linux/docker-ce/ubuntu/#install-using-the-convenience-script). If running Ubuntu, see these [extended instructions for help and troubleshooting](/docs/contributors/env-ubuntu.md).
 
@@ -31,7 +31,7 @@ To install Docker Compose, [follow their instructions here](https://docs.docker.
 Once Docker is installed and running, run this script to install WordPress, and build your local environment:
 
 ```
-npm run env install
+npx wp-env start
 ```
 
 #### Alternative Method: Using an Existing Local WordPress Install
@@ -54,7 +54,7 @@ In Windows, you can set the `WP_DEVELOP_DIR` environment variable using the appr
 ### Step 2: Accessing and Configuring the Local WordPress Install
 #### Accessing the Local WordPress Install
 
-Whether you decided to use Docker or an existing local WordPress install, the WordPress installation should now be available at `http://localhost:8889` (**Username**: `admin`, **Password**: `password`).
+Whether you decided to use `wp-env` or an existing local WordPress install, the WordPress installation should now be available at `http://localhost:8889` (**Username**: `admin`, **Password**: `password`).
 If this port is in use, you can override it using the `LOCAL_PORT` environment variable. For example running the below command on your computer will change the URL to
 `http://localhost:7777` .
 
