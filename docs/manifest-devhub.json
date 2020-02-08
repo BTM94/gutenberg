@@ -588,6 +588,12 @@
 		"parent": null
 	},
 	{
+		"title": "AnglePicker",
+		"slug": "angle-picker",
+		"markdown_source": "../packages/components/src/angle-picker/README.md",
+		"parent": "components"
+	},
+	{
 		"title": "Animate",
 		"slug": "animate",
 		"markdown_source": "../packages/components/src/animate/README.md",
